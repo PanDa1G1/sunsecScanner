@@ -1,0 +1,4 @@
+/etc/passwd
+../logs/access_log
+../logs/error_log
+/etc/shadow
