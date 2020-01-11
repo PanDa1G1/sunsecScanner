@@ -25,7 +25,9 @@ web扫描器
 ## 常见功能模块
 --------
 
-**路径扫描**
+### 路径扫描
+-----
+
 
 使用
 
@@ -35,7 +37,9 @@ python main.py -u htt://xxxx -p 1 [-d 指定字典] [-n指定协程的数量]
 
 字典和协程数量可以自己指定，也可以使用默认
 
-**端口扫描**
+### 端口扫描
+-----
+
 
 使用
 
@@ -48,7 +52,9 @@ python main.py -u ip -P [port1,port2,port3...] or [port1-port2]
 * 扫描特定的一个或多个端口  22,80,3389等
 * 扫描指定端口范围的端口 -P 1-65535
 
-**局域网ip扫描**
+### 局域网ip扫描
+-----
+
 
 使用
 
@@ -58,7 +64,9 @@ python main.py -u 网络号/24 -sP 1
 
 这里目前只支持A,B,C类的地址，不支持无类地址
 
-**web应用指纹扫描**
+### web应用指纹扫描
+------
+
 
 使用
 
@@ -72,7 +80,9 @@ python main.py -u url --sqlit sqllit_file
 
 -----
 
-**LFi--fuzz**
+### LFi--fuzz
+------
+
 
 使用
 
@@ -86,7 +96,10 @@ python main.py -u http://xxxxx?fuzz=fuzz -F 1 --param_file file1 --value_file -n
 ``param_file``是储存参数值的字典，有默认的文件，可以自己指定。``value_file``是值得字典，也有默认得文件，可以自己指定。 在``directory``文件夹下有常见得爆破字典文件。
 
 
-**xss** 
+### xss
+------
+
+
 
 用法
 
@@ -106,13 +119,14 @@ python main.py -u http://127.0.0.1/php/2.php?a=* --xss 1
 
 ``dom-xss``由于注入代码的位置不确定，只进行了常见的dom操作做的关键函数的扫描，所以进行js代码注入的时候，需要自己修改，同时审计代码，判断注入的点，构造合适的payload。 默认是使用上述两种字典合成的一个大字典，也可以自己生成字典。
 
-**sql注入**
+### sql注入
+----------
 
 sql注入模块``主要作用是发现注入点，同时fuzz过滤的规则，找到可以注入的payload格式``，并不包括数据注入部分。之后对数据进行注入的时候，需要``配合sqlmap``，通过自定义sqlmap的payload 进行数据的注入。
 
 这里主要使用的注入方法有 union注入、基于错误的注入、基于boolen的注入，基于时间的注入。
 
-### union 注入
+#### union 注入
 
 ------
 
@@ -124,7 +138,7 @@ python main.py -u url --sql 1 --union 1 [--method 默认get][--headfile 配合po
 
 union 注入默认是get类型的。其他类型可以自己指定。头文件主要是配合post类型，类似sqlmap中的-r参数。
 
-### error注入
+#### error注入
 
 ------
 
@@ -140,7 +154,7 @@ python main.py -u url --sql 1 --error 1 [--method 默认get][--headfile 配合po
 
 这里使用了协程，默认是200 可以自行修改。
 
-### Boolen注入
+#### Boolen注入
 ------
 
 使用
@@ -153,7 +167,7 @@ python main.py -u url --sql 1 --boolen 1 [--method 默认get][--headfile 配合p
 
 在``sql_injection/make_dict``下面的``Boolen_make_dict.py``用来生成Boolen注入的字典，主要是sql注入中一些常见的绕过，eg：逗号，空格，大小写混合，重叠等。可以自定义添加，生成特定的字典。生成的字典会存在``sql_injection/payload``下面
 
-### Time注入
+#### Time注入
 ------
 
 使用
