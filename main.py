@@ -11,6 +11,7 @@ from sql_injection.error_inject import error_inject
 from sql_injection.Boolen_scan import Boolen_Scan
 from sql_injection.time_scan import Time_scan
 from xss.xss_scan import xss_Scanner
+from ssrf.ssrf import ssrfScan
 import sys
 
 
@@ -39,16 +40,25 @@ class menu():
 		parser.add_argument('--union', '--union',dest="union_scan", help="union scan ", type=str,default = False)
 		parser.add_argument('--error', '--error',dest="error_scan", help="error scan ", type=str,default = False)
 		parser.add_argument('--Boolen', '--Boolen',dest="Boolen_scan", help="Boolen scan ", type=str,default = False)
+		parser.add_argument('--true_string', '--true_string', dest="true_string", help="if payload is true,the string that will in page", type=str,default = "")
+		parser.add_argument('--false_string', '--false_string', dest="false_string", help="tif payload is False,the string that will in page", type=str,default = "")
 		parser.add_argument('--time', '--time',dest="time_scan", help="Boolen scan ", type=str,default = False)
 		parser.add_argument('--wait_time', '--wait_time',dest="wait_time", help="wait_time ", type=int,default = 5)
 		parser.add_argument('--payload_num', '--payload_num',dest="payload_num", help="the num of payload you want to print. default 10(used for error,boolen,time inject)", type=int,default = 10)
-		parser.add_argument('-x', '--xss',dest="xss_scan", help="xss scan", type=str,default = False)		
+		parser.add_argument('-x', '--xss',dest="xss_scan", help="xss scan", type=str,default = False)
+		parser.add_argument('--param_file', '--param_file', dest="param_file", help="LFi fuzz param_file", type=str,default = 'directroy/123.txt')
+		parser.add_argument('--value_file', '--value_file', dest="value_file", help="LFi fuzz value_file", type=str,default = 'directroy/pathtotest_huge.txt')
+		parser.add_argument('--ssrf', '--ssrf', dest="ssrf_scan", help="whether start ssrf scan", type=str,default = False)
+		parser.add_argument('--redirect_file', '--redirect_file', dest="redirect_file", help="the path of 302 file if not will not try 302", type=str,default = None)
+		
+
 		self.args = parser.parse_args()
 	
 	def start(self):
 		
 		try :
 			self.get_input()
+			#路径扫描
 			if self.args.path_scan:
 				time0 = time.time()
 				scan_path = path_scan(self.args.scan_url,self.args.coroutine_num,self.args.dictory)
@@ -56,6 +66,7 @@ class menu():
 				time1 = time.time()
 				self._print.print_end(time1 - time0,'path scan')
 
+			#指纹扫描
 			if self.args.finger_scan:
 				time0 = time.time()
 				finger_scan = FingerScan(self.args.scan_url,self.args.sqlite_file)
@@ -63,19 +74,22 @@ class menu():
 				time1 = time.time()
 				self._print.print_end(time1 - time0,'finger scan')
 
+			#端口扫描
 			if self.args.port_scan:
 				thread = myThread(self.args.scan_url,self.args.port_scan)
 				thread.in_queue()
 				thread.scan_start()	
 
 			if self.args.fuzz:
-				fuzz = Fuzz(self.args.scan_url)
+				fuzz = Fuzz(self.args.scan_url,num = self.args.coroutine_num,param_file=self.args.param_file,value_file=self.args.value_file)
 				fuzz.start()
-
+			
+			# ip扫描
 			if self.args.Ipscan:
 				scan = Ipscan(self.args.scan_url)
 				scan.ip_queue()
 				scan.scan_start()
+
 			if self.args.sql_scan:
 				if 	self.args.union_scan:
 					#self._print.start_scan("union",time0)
@@ -83,19 +97,28 @@ class menu():
 					union_scan.union_inject()
 					self._print.sql_stop()
 				if self.args.error_scan:
+					time0 = time.time()
 					self._print.start_scan("error")
 					error_scan = error_inject(self.args.scan_url,self.args.sql_method,self.args.header_file,payload_num=self.args.payload_num)
 					error_scan.start()
-					self._print.sql_stop()
+					time1 = time.time()
+					self._print.print_end(time1 - time0,'SQL_Error scan')
 				if self.args.Boolen_scan:
+					time0 = time.time()
 					self._print.start_scan("Boolen")
-					Boolen_scan = Boolen_Scan(self.args.scan_url,method = self.args.sql_method,file = self.args.header_file,thread_num = self.args.thread_num,payload_num=self.args.payload_num)
+					Boolen_scan = Boolen_Scan(self.args.scan_url,method = self.args.sql_method,file = self.args.header_file,thread_num = self.args.thread_num,payload_num=self.args.payload_num, string=self.args.true_string, not_string=self.args.false_string)
 					Boolen_scan.start()
+					time1 = time.time()
+					self._print.print_end(time1 - time0,'SQL_Boolen scan')
 				if self.args.time_scan:
+					time0 = time.time()
 					self._print.start_scan("time")
 					Time = Time_scan(self.args.scan_url,method = self.args.sql_method,file = self.args.header_file,thread_num = self.args.thread_num,payload_num=self.args.payload_num,wait_time=self.args.wait_time)
 					Time.start()
+					time1 = time.time()
+					self._print.print_end(time1 - time0,'SQL_time scan')
 				if not self.args.union_scan and not self.args.error_scan and not self.args.Boolen_scan and not self.args.time_scan:
+					time0 = time.time()
 					self._print.start_scan("union")
 					union_scan = ScanUnion(self.args.scan_url,method = self.args.sql_method,file = self.args.header_file)
 					union_scan.union_inject()
@@ -104,16 +127,40 @@ class menu():
 					error_scan.start()
 					self._print.sql_stop()
 					self._print.start_scan("Boolen")
-					Boolen_scan = Boolen_Scan(self.args.scan_url,method = self.args.sql_method,file = self.args.header_file,thread_num = self.args.thread_num,payload_num=self.args.payload_num)
+					Boolen_scan = Boolen_Scan(self.args.scan_url,method = self.args.sql_method,file = self.args.header_file,thread_num = self.args.thread_num,payload_num=self.args.payload_num,string=self.args.true_string,not_string=self.args.false_string)
 					Boolen_scan.start()
 					self._print.start_scan("time")
 					time_scan = time_scan(self.args.scan_url,method = self.args.sql_method,file = self.args.header_file,thread_num = self.args.thread_num,payload_num=self.args.payload_num,wait_time = self.args.wait_time)
 					time_scan.start()
+					time1 = time.time()
+					self._print.print_end(time1 - time0,'SQL scan')
 				
 			if self.args.xss_scan:
 				self._print.start_scan("xss")
 				xssScanner=xss_Scanner(self.args.scan_url,thread_num = self.args.thread_num,payload_num=self.args.payload_num)
 				xssScanner.run()
+			
+			if self.args.ssrf_scan:
+				self._print.start_scan("ssrf")
+				if self.args.redirect_file:
+					time0 = time.time()
+					ssrfScan_ = ssrfScan(self.args.scan_url,self.args.scan_url)
+					ssrfScan_.FileScan()
+					ssrfScan_.dictScan()
+					ssrfScan_.redirectScan()
+					ssrfScan_.url_in_queue()
+					ssrfScan_.start()
+					time1 = time.time()
+					self._print.print_end(time1 - time0,'SSRF scan')
+				else:
+					time0 = time.time()
+					ssrfScan_ = ssrfScan(self.args.scan_url)
+					ssrfScan_.FileScan()
+					ssrfScan_.dictScan()
+					ssrfScan_.url_in_queue()
+					ssrfScan_.start()
+					time1 = time.time()
+					self._print.print_end(time1 - time0,'SSRF scan')
 
 		except OSError as e:
 			pass
