@@ -1,0 +1,10 @@
+http://127.0.0.1
+http://127.0.0.1.xip.io/
+http://example.com@127.0.0.1
+http://localhost
+http://[::]/
+http://2130706433
+http://0/
+http://0x7000001
+http://17700000001
+127。0。0。1
