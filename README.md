@@ -9,6 +9,7 @@ web扫描器
   * 应用指纹扫描
   * 局域网ip扫描
 * 常见web漏洞扫描
+  * 爬虫爬取url
   * sql注入
     * union注入
     * 基于错误的注入
@@ -92,9 +93,16 @@ python main.py -u url --sqlit sqllit_file -f 1
 
 -----
 
+web漏洞的扫描可以单独扫描某个页面，也可以先用爬虫对目标站点进行url爬取，之后再对爬取后的url进行逐个扫描。爬虫部分使用了scrapy框架，爬取的url可以直接再quotes.py里面修改。接着直接运行即可。之后要配合扫描器的话，直接运行
+
+```
+python main_all.py
+```
+
+都是各个模块的默认设置，如果要添加自定义设置，需要在代码中自行添加参数
+
 ### LFi && 目录穿越扫描
 ------
-
 
 使用
 
@@ -197,14 +205,14 @@ python main.py -u url --sql 1 --boolen 1 [--method 默认get][--r 配合post req
 python main.py -u url --sql 1 --time 1 [--method 默认get][--headfile 配合post] [--payload_num default 10] [--thread_num 线程数 默认100] [--wait_time sleep的时间]
 ```
 
-默认是get类型的。其他类型可以自己指定。头文件主要是配合post类型，类似sqlmap中的-r参数。``payload_num``用来指定输出的可用的payload的个数，默认是10
+默认是get类型的。其他类型可以自己指定。头文件主要是配合post类型，类似sqlmap中的-r参数。``payload_num``用来指定输出的可用的payload的个mm  m数，默认是10
+2m
+  在``sql_injection/make_dict``下面的``time_make_dict.py``用来生成time注入的字典，主要是sql注入中一些常见的绕过，eg：逗号，空格，大小写混合，重叠等。可以自定义添加，生成特定的字典。生成的字典会存在``sql_injection/payload``下面。
+ 
+*  注入payload处用``*``替代
 
-在``sql_injection/make_dict``下面的``time_make_dict.py``用来生成time注入的字典，主要是sql注入中一些常见的绕过，eg：逗号，空格，大小写混合，重叠等。可以自定义添加，生成特定的字典。生成的字典会存在``sql_injection/payload``下面。
-
-* 注入payload处用``*``替代
-
-![](image/7.gif)
-
+![0](image/7.gif)
+0
 ### ssrf
 
 ```
